@@ -56,7 +56,6 @@
 
   function goToPage(pageIndex) {
     const pageCount = getPageCount();
-    const visible = getVisibleCount();
 
     if (pageIndex < 0) {
       pageIndex = pageCount - 1;
@@ -66,8 +65,10 @@
 
     currentPage = pageIndex;
 
-    const slideWidth = viewport.clientWidth / visible;
-    const offset = currentPage * slideWidth;
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const trackStyle = window.getComputedStyle(track);
+    const gap = parseFloat(trackStyle.columnGap) || 0;
+    const offset = currentPage * (slideWidth + gap);
 
     track.style.transform = 'translateX(-' + offset + 'px)';
     updatePager();
