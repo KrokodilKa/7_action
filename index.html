@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея — слайдер</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="gallery-container">
+    <h1 class="gallery-title">Галерея</h1>
+
+    <div class="slider" id="slider">
+      <button class="slider-arrow slider-arrow--prev" id="arrowPrev" aria-label="Предыдущий слайд"></button>
+      <div class="slider-viewport" id="sliderViewport">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide"><img src="a.gif" alt="Изображение a"></div>
+          <div class="slide"><img src="b.gif" alt="Изображение b"></div>
+          <div class="slide"><img src="c.gif" alt="Изображение c"></div>
+          <div class="slide"><img src="d.gif" alt="Изображение d"></div>
+          <div class="slide"><img src="e.gif" alt="Изображение e"></div>
+          <div class="slide"><img src="f.gif" alt="Изображение f"></div>
+          <div class="slide"><img src="g.gif" alt="Изображение g"></div>
+          <div class="slide"><img src="h.gif" alt="Изображение h"></div>
+        </div>
+      </div>
+      <button class="slider-arrow slider-arrow--next" id="arrowNext" aria-label="Следующий слайд"></button>
+    </div>
+
+    <div class="pager" id="pager" role="tablist" aria-label="Навигация по галерее"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
